@@ -1,0 +1,34 @@
+body {
+    display: flex;
+}
+
+#glo2003-project-notifications {
+    margin-right: 3em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    overflow-y: auto;
+    
+    background-color: #16262f;
+
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+}
+
+.notification-box {
+    border-bottom: 1px solid black;
+}
+
+.notification-title {
+    text-align: center;
+}
+
+.notification-infos {
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-repository {
+}
