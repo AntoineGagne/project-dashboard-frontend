@@ -2,6 +2,15 @@ body {
     display: flex;
 }
 
+.export-schedule-btn {
+    display: block;
+    background-color: darkgray;
+    color: black;
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
 #glo2003-project-notifications {
     margin-right: 3em;
     padding-right: 0.5em;

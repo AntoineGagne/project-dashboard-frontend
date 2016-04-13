@@ -14,49 +14,41 @@ var projectNotifications = {
         return this;
     },
 
-    setNotificationsBoard: function (selector) {
-        this.notificationsElement = document.getElementById(selector);
-
-        return this;
-    },
-
     getNotifications: function (notifications) {
         var parsedNotifications = JSON.parse(notifications.data);
         if (parsedNotifications !== undefined) {
             if (this.previousNotifications === undefined) {
                 this.previousNotifications = parsedNotifications;
-
-                var parentElement = document.getElementById('glo2003-project-notifications');
-                parentElement.innerHTML = '';
-                this.previousNotifications.forEach(function (notification) {
-                        parentElement.insertAdjacentHTML(
-                            'afterBegin',
-                            '<div class="notification-box">' +
-                                '<h1 class="notification-title">' +
-                                    notification.title +
-                                '</h1>' +
-
-                                '<div class="notification-infos">' +
-                                    '<p class="notification-type">' +
-                                        notification.type +
-                                    '</p>' +
-
-                                    '<p class="notification-reason">' +
-                                        notification.reason +
-                                    '</p>' +
-                                '</div>' +
-
-                                '<p class="notification-repository">' +
-                                    notification.repository_name +
-                                '</p>' +
-                            '</div>'
-                    );
-                });
             }
+
+            var parentElement = document.getElementById('glo2003-project-notifications');
+            parentElement.innerHTML = '';
+            this.previousNotifications.forEach(function (notification) {
+                    parentElement.insertAdjacentHTML(
+                        'afterBegin',
+                        '<div class="notification-box">' +
+                            '<h1 class="notification-title">' +
+                                notification.title +
+                            '</h1>' +
+
+                            '<div class="notification-infos">' +
+                                '<p class="notification-type">' +
+                                    notification.type +
+                                '</p>' +
+
+                                '<p class="notification-reason">' +
+                                    notification.reason +
+                                '</p>' +
+                            '</div>' +
+
+                            '<p class="notification-repository">' +
+                                notification.repository_name +
+                            '</p>' +
+                        '</div>'
+                );
+            });
         }
     }
 };
 
-projectNotifications
-    .setNotificationsBoard('glo2003-project-notifications')
-    .init();
+projectNotifications.init('ws://glo-2003.herokuapp.com/notifications');
