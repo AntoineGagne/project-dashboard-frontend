@@ -10,7 +10,7 @@
     "build": "webpack && cp index.html dist/index.html && cp -r notifications-board/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve dist",
-    "start": "npm run build && node index.js"
+    "start": "node index.js"
   },
   "dependencies": {},
   "devDependencies": {
