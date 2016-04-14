@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack && cp index.html dist/index.html && cp -r notifications-board/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "serve dist"
+    "serve": "serve dist",
+    "start": "npm run build && node index.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -21,6 +22,7 @@
     "babel-runtime": "^6.0.14",
     "file-loader": "^0.8.4",
     "freezer-js": "^0.9.4",
+    "express": "latest",
     "querystringparser": "^0.1.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
