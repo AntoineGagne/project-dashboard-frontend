@@ -12,7 +12,10 @@
     "serve": "serve dist",
     "start": "node index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "latest",
+    "webpack": "^1.12.3"
+  },
   "devDependencies": {
     "babel-cli": "^6.1.4",
     "babel-core": "^6.1.2",
