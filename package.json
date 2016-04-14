@@ -7,7 +7,7 @@
   "repository": "https://github.com/glo2003/projects-dashboard-frontend",
   "main": "index.js",
   "scripts": {
-    "build": "webpack && cp index.html dist/index.html",
+    "build": "webpack && cp index.html dist/index.html && cp -r notifications-board/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve dist"
   },
@@ -19,6 +19,7 @@
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "babel-runtime": "^6.0.14",
+    "express": "latest",
     "file-loader": "^0.8.4",
     "freezer-js": "^0.9.4",
     "querystringparser": "^0.1.1",
