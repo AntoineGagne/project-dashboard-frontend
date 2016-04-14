@@ -7,7 +7,7 @@ var http = require('http').Server(app);
 
 var port = process.env.PORT || 3000;
 
-var path = __dirname + '/dist';
+var path = __dirname;
 app.use('/', express.static(path));
 
 http.listen(port, function () {
